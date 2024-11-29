@@ -2,7 +2,7 @@ import pygame
 from board import Board
 from pieces import *
 from player import Player
-
+import time
 
 
 
@@ -22,12 +22,11 @@ def main(args):
 				running = False
 				
 				
-		king = King('white', (0,2))
-		result = king.get_available_moves(board)
-		
+
 		screen.fill((255,255,255))
-		screen.blit(king.image, (10, 10))
+		board.draw(screen)
 		pygame.display.flip()
+		pygame.time.delay(500)
 
 if __name__ == '__main__':
     import sys
